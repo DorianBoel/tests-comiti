@@ -26,6 +26,15 @@ form.addEventListener("submit", (evt) => {
         body: JSON.stringify(reqData)
     })
     .then(res => res.json())
-    .then(data => console.log(data))
-    .catch(err => console.error(err));
+    .then((data) => {
+        console.log(data);
+        displayAlert();
+    })
+    .then(() => {
+        firstNameInput.value = "";
+        lastNameInput.value = "";
+        phoneNumberInput.value = "";
+        dateOfBirthInput.value = "";
+    })
+    .catch(err => console.error(err.message));
 });
