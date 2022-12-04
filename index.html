@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajout Contact</title>
+</head>
+<body>
+    <form id="contactForm" method="post">
+
+        <label for="firstNameInput">Prénom (requis)</label>
+        <input id="firstNameInput" type="text" name="firstName" required>
+
+        <label for="lastNameInput">Nom de Famille (requis)</label>
+        <input id="lastNameInput" type="text" name="lastName" required>
+
+        <label for="phoneNumberInput">Numéro de téléphone (requis)</label>
+        <input id="phoneNumberInput" type="tel" name="phoneNumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+
+        <label for="dateOfBirthInput">Date de naissance</label>
+        <input id="dateOfBirthInput" type="date" name="dateOfBirth">
+
+        <button type="submit">
+            Envoyer
+        </button>
+
+    </form>
+
+    <script src="assets/js/vars.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
