@@ -19,11 +19,11 @@ app.listen(PORT, () => {
 
 app.post("/contact", (req, res) => {
     addContact(req.body)
-        .then((entry) => {
+        .then((ent) => {
             console.log("New contact added: ");
-            console.log(entry);
+            console.log(ent);
             console.log();
-            res.send(entry);
+            res.send(ent);
         })
         .catch((err: Error) => res.send(err.message));
 });
