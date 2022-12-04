@@ -4,7 +4,6 @@ import { Contact } from "./entities/Contact";
 import { ContactMapper } from "./mappers/ContactMapper";
 
 async function addContact(contact: ContactDTO): Promise<ContactDTO> {
-
     let dao: DAO<Contact, ContactDTO>;
 
     return DAO.loader<Contact, ContactDTO>(new ContactMapper())
